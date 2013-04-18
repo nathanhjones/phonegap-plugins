@@ -80,7 +80,7 @@
     SHKItem *item;
     
     NSString *message = [arguments objectAtIndex:1];
-    if ([arguments objectAtIndex:2]==NULL) {
+    if ([arguments objectAtIndex:2] != [NSNull null]) {
         NSURL *itemUrl = [NSURL URLWithString:[arguments objectAtIndex:2]];  
         item = [SHKItem URL:itemUrl title:message contentType:SHKURLContentTypeWebpage];
     } else {
@@ -97,7 +97,7 @@
     SHKItem *item;
     
     NSString *message = [arguments objectAtIndex:1];
-    if ([arguments objectAtIndex:2]==NULL) {
+    if ([arguments objectAtIndex:2] != [NSNull null]) {
         NSURL *itemUrl = [NSURL URLWithString:[arguments objectAtIndex:2]];  
         item = [SHKItem URL:itemUrl title:message contentType:SHKURLContentTypeWebpage];
     } else {
